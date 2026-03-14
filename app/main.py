@@ -23,8 +23,8 @@ else:
     device = torch.device("cpu")
 
 nlp = en_core_web_sm.load()
-sentence_model = SentenceTransformer("app/embedding/all-mpnet-base-v2").to(device)
-
+#sentence_model = SentenceTransformer("app/embedding/all-mpnet-base-v2").to(device)
+sentence_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2").to(device)
 # Define model architecture
 class ClassificationModel(nn.Module):
     def __init__(self, input_size):
